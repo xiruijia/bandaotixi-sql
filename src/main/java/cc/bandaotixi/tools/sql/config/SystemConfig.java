@@ -55,9 +55,9 @@ public class SystemConfig {
 			fos = new FileOutputStream(new File(CONFIG_PATH));
 			pro.store(fos, pro.getProperty(KEY_TITLE));
 		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
+			Log.error("读取配置文件异常:可删除配置文件:"+CONFIG_PATH, e1);
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			Log.error("读取配置文件异常:可删除配置文件:"+CONFIG_PATH, e1);
 		}
 	}
 }
