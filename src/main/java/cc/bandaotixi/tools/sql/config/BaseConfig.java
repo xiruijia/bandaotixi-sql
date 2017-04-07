@@ -48,6 +48,7 @@ public class BaseConfig {
 
 	public static void save() {
 		Properties pro = getProperties();
+		gether();
 		FileOutputStream fos;
 		try {
 			Log.info("保存配置文件:"+CONFIG_PATH);
@@ -59,5 +60,16 @@ public class BaseConfig {
 		} catch (IOException e1) {
 			Log.error("读取配置文件异常:可删除配置文件:"+CONFIG_PATH, e1);
 		}
+	}
+	/**
+	 * 收集需要保存的信息
+	 */
+	public static void gether(){
+		//窗口信息
+		WindowConfig.setWindowX(Containers.getHome().getX());
+		WindowConfig.setWindowY(Containers.getHome().getY());
+		WindowConfig.setWindowWidth(Containers.getHome().getWidth());
+		WindowConfig.setWindowHeight(Containers.getHome().getHeight());
+		WindowConfig.setWindowHomeSplitDividerLocation(Containers.getHomeSplit().getDividerLocation());
 	}
 }

@@ -4,7 +4,6 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.WindowEvent;
 
 import cc.bandaotixi.tools.sql.config.SystemConfig;
-import cc.bandaotixi.tools.sql.config.WindowConfig;
 
 public class WindowListener implements java.awt.event.WindowListener,java.awt.event.WindowStateListener,java.awt.event.WindowFocusListener,java.awt.event.ComponentListener{
 	
@@ -66,15 +65,15 @@ public class WindowListener implements java.awt.event.WindowListener,java.awt.ev
 	@Override
 	public void componentResized(ComponentEvent e) {
 		// 改变大小
-		WindowConfig.setWindwoWidth(e.getComponent().getWidth());
-		WindowConfig.setWindowHeight(e.getComponent().getHeight());
+//		WindowConfig.setWindwoWidth(e.getComponent().getWidth());
+//		WindowConfig.setWindowHeight(e.getComponent().getHeight());
 	}
 
 	@Override
 	public void componentMoved(ComponentEvent e) {
 		// 移动窗口位置
-		WindowConfig.setWindowX(e.getComponent().getX());
-		WindowConfig.setWindowY(e.getComponent().getY());
+//		WindowConfig.setWindowX(e.getComponent().getX());
+//		WindowConfig.setWindowY(e.getComponent().getY());
 	}
 
 	@Override
